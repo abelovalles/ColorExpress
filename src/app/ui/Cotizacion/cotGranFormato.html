@@ -1,0 +1,152 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a [routerLink]="['/home']" >Inicio</a></li>
+  <li class="breadcrumb-item"><a [routerLink]="['/services']" >Servicios</a></li>
+  <li class="breadcrumb-item"><a [routerLink]="['/services/granformato']" >Gran Formato</a></li>
+  <li class="breadcrumb-item active">Cotizacion</li>
+</ol>
+
+<!-- Usando Material Design-->
+<div class="container">
+  <h2>Cotizacion Gran Formato</h2>
+  <!-- No declaramos una variable local 2pero usamos la directiva de formGroup y seteamos el objeto complexForm que
+  definimos en el constructor . Desde el formulario realizaremos una referencia al root de compplexForm como puede ser
+   visto en la funcion submitForm -->
+  <form [formGroup]="complexForm" (ngSubmit)="submitForm(complexForm.value)" class="example-form">
+    <!-- en vez de setear un ngModel, utlizamos la directiva de formControl para sincronizar nuestro input al objeto de complexForm.
+     Tambien estamos seteando el atributo que queremos que el input correspondiente se sincronize, no se necesita el atributo de name-->
+
+    <div class="rows">
+      <!-- casilla cliente -->
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <md-input-container >
+            <input mdInput placeholder="Cliente" required [formControl]="complexForm.controls['cliente']">
+          </md-input-container>
+        </div>
+      </div>
+      <!-- casilla contacto,telefono,correo,celular -->
+      <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-3">
+          <md-input-container >
+            <input mdInput placeholder="Contacto" required [formControl]="complexForm.controls['contacto']">
+          </md-input-container>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3">
+          <md-input-container >
+            <input mdInput placeholder="Telefono [ ###-#### ]" type="text" [formControl]="complexForm.controls['telefono']" required>
+          </md-input-container>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3">
+          <md-input-container >
+            <input mdInput placeholder="Correo [nombre@empresa.com]" type="email" required [formControl]="complexForm.controls['email']">
+          </md-input-container>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3">
+          <md-input-container >
+            <input mdInput placeholder="Celular [ ####-#### ]" type="text" [formControl]="complexForm.controls['celular']">
+          </md-input-container>
+        </div>
+      </div>
+      <!-- casilla tipotrabajo -->
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <md-input-container >
+            <input mdInput placeholder="Tipo de Trabajo" required [mdAutocomplete]="ttrabajo" [formControl]="complexForm.controls['tipoTrabajo']">
+          </md-input-container>
+          <md-autocomplete #ttrabajo="mdAutocomplete">
+            <md-option *ngFor="let trabajo of tipoDeTrabajo | async" [value]="trabajo">
+              {{ trabajo }}
+            </md-option>
+          </md-autocomplete>
+        </div>
+      </div>
+      <!-- casilla cantidad,ancho,alto,medida -->
+      <div class="row">
+        <div class="colmd col-sm-3 col-md-3 col-lg-3">
+          <md-input-container >
+            <input mdInput placeholder="Cantidad" type="number" required [formControl]="complexForm.controls['cantidad']">
+          </md-input-container>
+        </div>
+        <div class="colmd col-sm-3 col-md-3 col-lg-3">
+          <md-input-container >
+            <input mdInput placeholder="Ancho" type="number" required [formControl]="complexForm.controls['ancho']">
+          </md-input-container>
+        </div>
+        <div class="colmd col-sm-3 col-md-3 col-lg-3">
+          <md-input-container >
+            <input mdInput placeholder="Alto" type="number" required [formControl]="complexForm.controls['alto']">
+          </md-input-container>
+        </div>
+        <div class="colmd col-sm-3 col-md-3 col-lg-3">
+          <md-input-container >
+            <input mdInput placeholder="Medida" [mdAutocomplete]="tmedida" required [formControl]="complexForm.controls['umedida']">
+          </md-input-container>
+          <md-autocomplete #tmedida="mdAutocomplete">
+            <md-option *ngFor="let medida of tipoMedida | async" [value]="medida">
+              {{ medida }}
+            </md-option>
+          </md-autocomplete>
+        </div>
+      </div>
+      <!-- casilla material -->
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <md-input-container >
+            <input mdInput placeholder="Material" required [mdAutocomplete]="tmaterial" [formControl]="complexForm.controls['material']">
+          </md-input-container>
+          <md-autocomplete #tmaterial="mdAutocomplete">
+            <md-option *ngFor="let material of tipoMaterial | async" [value]="material">
+              {{ material }}
+            </md-option>
+          </md-autocomplete>
+        </div>
+
+      </div>
+      <!-- casilla detalle -->
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <md-input-container >
+            <input mdInput placeholder="Detalle" [formControl]="complexForm.controls['detalle']">
+          </md-input-container>
+        </div>
+      </div>
+
+      <!--
+     <div class="form-group">
+       <label>Gender</label>
+     </div>
+     <div class="radio">
+       <label>
+         <input type="radio" name="gender" value="Male" [formControl]="complexForm.controls['gender']">
+         Male
+       </label>
+
+     </div>
+     <div class="radio">
+       <label>
+         <input type="radio" name="gender" value="Female" [formControl]="complexForm.controls['gender']">
+         Female
+       </label>
+     </div>
+
+     <div class="form-group">
+       <label>Activities</label>
+     </div>
+     <label class="checkbox-inline">
+       <input type="checkbox" value="hiking" name="hiking" [formControl]="complexForm.controls['hiking']"> Hiking
+     </label>
+     <label class="checkbox-inline">
+       <input type="checkbox" value="swimming" name="swimming" [formControl]="complexForm.controls['swiming']"> Swimming
+     </label>
+     <label class="checkbox-inline">
+       <input type="checkbox" value="running" name="running" [formControl]="complexForm.controls['running']"> Running
+     </label>
+      -->
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <button md-raised-button>Solicitar</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

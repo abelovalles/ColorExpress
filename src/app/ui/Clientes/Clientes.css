@@ -1,0 +1,19 @@
+/*--------------------------------------------------------------------------
++	Clients Logos Style
+--------------------------------------------------------------------------*/
+.clients-logo-wrapper img {
+  max-width: 200%;
+  overflow-x: scroll;
+}
+.carousel {
+  width: 80%;
+}
+
+.imagen{
+  height: inherit;
+  width: inherit;
+}
+
+.col-sm-4{
+  max-width: 50%;
+}

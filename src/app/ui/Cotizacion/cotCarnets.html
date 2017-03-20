@@ -1,0 +1,108 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a [routerLink]="['/home']" >Inicio</a></li>
+  <li class="breadcrumb-item"><a [routerLink]="['/services']" >Servicios</a></li>
+  <li class="breadcrumb-item"><a [routerLink]="['/services/carnets']" >Carnets</a></li>
+  <li class="breadcrumb-item active">Cotizacion</li>
+</ol>
+
+<!-- Usando Material Design-->
+<div class="container">
+  <h2>Cotizacion Carnets</h2>
+  <!-- No declaramos una variable local 2pero usamos la directiva de formGroup y seteamos el objeto complexForm que
+  definimos en el constructor . Desde el formulario realizaremos una referencia al root de compplexForm como puede ser
+   visto en la funcion submitForm -->
+  <form [formGroup]="complexForm" (ngSubmit)="submitForm(complexForm.value)">
+    <!-- en vez de setear un ngModel, utlizamos la directiva de formControl para sincronizar nuestro input al objeto de complexForm.
+     Tambien estamos seteando el atributo que queremos que el input correspondiente se sincronize, no se necesita el atributo de name-->
+
+    <div class="rows">
+      <!-- casilla cliente -->
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <md-input-container >
+            <input mdInput placeholder="Cliente" required [formControl]="complexForm.controls['cliente']">
+          </md-input-container>
+        </div>
+      </div>
+      <!-- casilla contacto,telefono,correo,celular -->
+      <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-3">
+          <md-input-container >
+            <input mdInput placeholder="Contacto" required [formControl]="complexForm.controls['contacto']">
+          </md-input-container>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3">
+          <md-input-container >
+            <input mdInput placeholder="Telefono [ ###-#### ]" type="text" [formControl]="complexForm.controls['telefono']" required>
+          </md-input-container>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3">
+          <md-input-container >
+            <input mdInput placeholder="Correo [nombre@empresa.com]" type="email" required [formControl]="complexForm.controls['email']">
+          </md-input-container>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3">
+          <md-input-container >
+            <input mdInput placeholder="Celular [ ####-#### ]" type="text" [formControl]="complexForm.controls['celular']">
+          </md-input-container>
+        </div>
+      </div>
+      <!-- casilla tipotrabajo -->
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <md-input-container >
+            <input mdInput placeholder="Tipo de Trabajo" [formControl]="complexForm.controls['tipoTrabajo']">
+          </md-input-container>
+        </div>
+      </div>
+      <!-- casilla cantidad,ancho,alto,medida -->
+      <div class="row">
+        <div class="colmd col-sm-3 col-md-3 col-lg-3">
+          <md-input-container >
+            <input mdInput placeholder="Cantidad" type="number" required [formControl]="complexForm.controls['cantidad']">
+          </md-input-container>
+        </div>
+      </div>
+      <!-- casilla tipo collar -->
+      <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6" >
+          <label>Collar : </label>
+          <md-radio-group >
+            <md-radio-button *ngFor="let material of materialDe" (click)="iniciarmaterial(material)"
+                             [value]="material">
+              {{material}}
+            </md-radio-button>
+          </md-radio-group>
+        </div>
+      </div>
+      <!-- casilla tipo porta carnet -->
+      <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6" >
+          <label>Porta Carnet : </label>
+          <md-radio-group >
+            <md-radio-button *ngFor="let portacarnet of porta" (click)="iniciarporta(portacarnet)"
+                             [value]="portacarnet">
+              {{portacarnet}}
+            </md-radio-button>
+          </md-radio-group>
+        </div>
+      </div>
+
+      <!-- casilla detalle -->
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <md-input-container >
+            <input mdInput placeholder="Detalle" [formControl]="complexForm.controls['detalle']">
+          </md-input-container>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <button md-raised-button>Solicitar</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

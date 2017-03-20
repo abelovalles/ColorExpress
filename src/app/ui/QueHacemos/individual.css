@@ -1,0 +1,11 @@
+img#detalle{
+  width: inherit;
+  height: 100%;
+}
+.mat-list-text{
+  height: auto;
+}
+
+img#imgcotiza{
+  width: 100%;
+}

@@ -1,0 +1,29 @@
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a [routerLink]="['/home']" >Inicio</a></li>
+  <li class="breadcrumb-item"><a [routerLink]="['/services']" >Servicios</a></li>
+  <li class="breadcrumb-item active">{{titulo}}</li>
+</ol>
+<div class="container">
+  <div class="row">
+  <div class="col-sm-6 col-md-6 col-lg-5" id="imp">
+    <img id="detalle" class="rounded" [src]="imagen2" >
+  </div>
+  <div class="col-sm-6 col-md-6 col-lg-5">
+    <md-list >
+      <h3 md-subheader>{{titulo}}</h3>
+      <md-list-item *ngFor="let servicio of servicios">
+        <md-icon md-list-avatar> <img [src]="imagen" width="40px" height="40px"></md-icon>
+        <p md-line >{{servicio.name}}</p>
+      </md-list-item>
+    </md-list>
+  </div>
+    <div class="col-sm-12 col-md-12 col-lg-2" >
+      <div class="d-flex flex-column justify-content-center">
+        <div class="p-2">
+        <a [routerLink]="[cotizacion]"><img id="imgcotiza" src="/app/images/iconos/cotizacion.png" > </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

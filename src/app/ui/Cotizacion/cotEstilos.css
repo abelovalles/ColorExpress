@@ -1,0 +1,11 @@
+.mat-input-container {
+  width: 100%;
+}
+.colmd{
+  width: 50%;
+}
+@media (min-width: 375px) {
+  .colmd{
+    width:25%;
+  }
+}

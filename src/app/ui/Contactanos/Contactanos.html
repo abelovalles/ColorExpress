@@ -1,0 +1,67 @@
+<div class="jumbotron">
+  <h2>Contactanos</h2>
+  <!-- No declaramos una variable local 2pero usamos la directiva de formGroup y seteamos el objeto complexForm que
+  definimos en el constructor . Desde el formulario realizaremos una referencia al root de compplexForm como puede ser
+   visto en la funcion submitForm -->
+  <form [formGroup]="complexForm" (ngSubmit)="submitForm(complexForm.value)">
+    <div class="form-group">
+      <label>Nombre/RUC :</label>
+      <!-- en vez de setear un ngModel, utlizamos la directiva de formControl para sincronizar nuestro input al objeto de complexForm.
+       Tambien estamos seteando el atributo que queremos que el input correspondiente se sincronize, no se necesita el atributo de name-->
+      <input class="form-control" type="text" placeholder="John" [formControl]="complexForm.controls['cliente']">
+
+    </div>
+    <div class="form-group">
+      <label>Contacto :</label>
+      <input class="form-control" type="text" placeholder="Eva" [formControl]="complexForm.controls['contacto']">
+    </div>
+
+    <div class="form-group">
+      <label>Correo :</label>
+      <input class="form-control" type="text" placeholder="john@empresa.com" [formControl]="complexForm.controls['correo']">
+    </div>
+    <div class="form-group">
+      <label>Mensaje :</label>
+      <input class="form-control" type="text" placeholder="Escribe tus consultas aqui." [formControl]="complexForm.controls['mensaje']">
+    </div>
+
+    <!--
+   <div class="form-group">
+     <label>Gender</label>
+   </div>
+   <div class="radio">
+     <label>
+       <input type="radio" name="gender" value="Male" [formControl]="complexForm.controls['gender']">
+       Male
+     </label>
+
+   </div>
+   <div class="radio">
+     <label>
+       <input type="radio" name="gender" value="Female" [formControl]="complexForm.controls['gender']">
+       Female
+     </label>
+   </div>
+
+   <div class="form-group">
+     <label>Activities</label>
+   </div>
+   <label class="checkbox-inline">
+     <input type="checkbox" value="hiking" name="hiking" [formControl]="complexForm.controls['hiking']"> Hiking
+   </label>
+   <label class="checkbox-inline">
+     <input type="checkbox" value="swimming" name="swimming" [formControl]="complexForm.controls['swiming']"> Swimming
+   </label>
+   <label class="checkbox-inline">
+     <input type="checkbox" value="running" name="running" [formControl]="complexForm.controls['running']"> Running
+   </label>
+    -->
+    <div class="form-group">
+      <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+
+  </form>
+</div>
+<app-footer>
+
+</app-footer>

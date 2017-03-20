@@ -1,0 +1,39 @@
+<!--<div class="section" id="nuestrosclientes">
+  <div class="container">
+    <div class="clients-logo-wrapper text-center row" >
+      <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="/app/images/clientes/sanpablobyn.png"  alt="Libreria San Pablo"></a></div>
+      <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="" alt="Client Name"></a></div>
+      <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="" alt="Client Name"></a></div>
+      <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="" alt="Client Name"></a></div>
+      <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="" alt="Client Name"></a></div>
+      <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="" alt="Client Name"></a></div>
+      <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="" alt="Client Name"></a></div>
+      <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="" alt="Client Name"></a></div>
+      <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="" alt="Client Name"></a></div>
+      <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="" alt="Client Name"></a></div>
+      <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="" alt="Client Name"></a></div>
+      <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="" alt="Client Name"></a></div>
+    </div>
+  </div>
+</div>-->
+<!-- Para colocar slider con varias imagenes
+<ngb-carousel class="container">
+  <template ngbSlide *ngFor="let images of slides">
+    <div class="row">
+      <div class="col-xs-2 col-sm-2"  *ngFor="let image of images">
+        <img class="imagen" src="{{image.url}}">
+      </div>
+    </div>
+  </template>
+</ngb-carousel>-->
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a [routerLink]="['/home']" >Inicio</a></li>
+  <li class="breadcrumb-item active">Clientes</li>
+</ol>
+<div class="container">
+  <div class="row">
+    <div class=" col-xs-6 col-sm-4 col-md-2 col-lg-2" *ngFor="let image of slides" >
+      <img src="{{image.url}}" class="imagen">
+    </div>
+  </div>
+</div>

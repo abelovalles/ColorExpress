@@ -1,0 +1,396 @@
+
+/*--------------------------------------------------------------------------
++	Services Style
+--------------------------------------------------------------------------*/
+
+
+
+
+/* Multicolumn Cuadro dde que hacemos al adaptarce a movil*/
+.service-wrapper {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  margin: 20px 10px;
+  text-align: center;
+  padding: 30px 20px;
+  -webkit-border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 5px;
+  -moz-background-clip: padding;
+  border-radius: 5px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 0 3px #999;
+  -moz-box-shadow: 0 0 3px #999;
+  box-shadow: /*0 0 3px #999;*/0px 13px 20px 0px #999
+  /*noinspection CssInvalidPropertyValue*/
+  /*color: 0 0 3px #999;*/
+}
+
+.service-wrapper:hover{
+  opacity: 1;
+  filter: alpha(opacity=100);
+
+}
+
+.imghover:hover{
+  opacity: 0.1;
+  filter: alpha(opacity=10);
+}
+.imghover{
+  opacity: 1;
+  filter: alpha(opacity=100);
+  width:inherit;
+  height: inherit;
+  background: rgba(255,255,255,0.5);
+}
+
+/*Inicia configuracion inicial de las imagenes de fondo pantalla de 320x551*/
+/*coloco la imagen de fondo de imprenta*/
+div#imprenta.service-wrapper{
+  background:  url("/app/images/quehacemos/imprenta304x229.png");
+  background-position: center;
+  background-size: 100%;
+  -moz-background-image: url("/app/images/quehacemos/imprenta304x229.png");
+  -webkit-background-image: url("/app/images/quehacemos/imprenta304x229.png");
+  -o-background-image:  url("/app/images/quehacemos/imprenta304x229.png");
+}
+
+/*coloco la imagen de fondo de decoracion*/
+div#decoracion.service-wrapper{
+  background:  url("/app/images/quehacemos/decoracion304x229.png");
+  background-position: center;
+  background-size: 100%;
+  -moz-background-image: url("/app/images/quehacemos/decoracion304x229.png");
+  -webkit-background-image: url("/app/images/quehacemos/decoracion304x229.png");
+  -o-background-image:  url("/app/images/quehacemos/decoracion304x229.png");
+}
+
+/*coloco la imagen de fondo de Diseño Editorial*/
+div#disenoeditorial.service-wrapper{
+  background:  url("/app/images/quehacemos/disenoeditorial304x229.png");
+  background-position: center;
+  background-size: 100%;
+  -moz-background-image: url("/app/images/quehacemos/disenoeditorial304x229.png");
+  -webkit-background-image: url("/app/images/quehacemos/disenoeditorial304x229.png");
+  -o-background-image:  url("/app/images/quehacemos/disenoeditorial304x229.png");
+}
+
+/*coloco la imagen de fondo de imprenta*/
+div#carnets.service-wrapper{
+  background:  url("/app/images/quehacemos/carnets304x229.png");
+  background-position: center;
+  background-size: 100%;
+  -moz-background-image: url("/app/images/quehacemos/carnets304x229.png");
+  -webkit-background-image: url("/app/images/quehacemos/carnets304x229.png");
+  -o-background-image:  url("/app/images/quehacemos/carnets304x229.png");
+}
+
+/*coloco la imagen de fondo de imprenta*/
+div#granformato.service-wrapper{
+  background:  url("/app/images/quehacemos/granformato304x229.png");
+  background-position: center;
+  background-size: 100%;
+  -moz-background-image: url("/app/images/quehacemos/granformato304x229.png");
+  -webkit-background-image: url("/app/images/quehacemos/granformato304x229.png");
+  -o-background-image:  url("/app/images/quehacemos/granformato304x229.png");
+}
+
+/*coloco la imagen de fondo de imprenta*/
+div#rotulacion.service-wrapper{
+  background:  url("/app/images/quehacemos/rotulacion304x229.png");
+  background-position: center;
+  background-size: 100%;
+  -moz-background-image: url("/app/images/quehacemos/rotulacion304x229.png");
+  -webkit-background-image: url("/app/images/quehacemos/rotulacion304x229.png");
+  -o-background-image:  url("/app/images/quehacemos/rotulacion304x229.png");
+}
+
+/*coloco la imagen de fondo de imprenta*/
+div#pop.service-wrapper{
+  background:  url("/app/images/quehacemos/pop304x229.png");
+  background-position: center;
+  background-size: 100%;
+  -moz-background-image: url("/app/images/quehacemos/pop304x229.png");
+  -webkit-background-image: url("/app/images/quehacemos/pop304x229.png");
+  -o-background-image:  url("/app/images/quehacemos/pop304x229.png");
+}
+
+/*coloco la imagen de fondo de imprenta*/
+div#senalizacion.service-wrapper {
+  background: url("/app/images/quehacemos/senalizacion304x229.png");
+  background-position: center;
+  background-size: 100%;
+  -moz-background-image: url("/app/images/quehacemos/senalizacion304x229.png");
+  -webkit-background-image: url("/app/images/quehacemos/senalizacion304x229.png");
+  -o-background-image: url("/app/images/quehacemos/senalizacion304x229.png");
+}
+
+/*Finaliza configuracion inicial de las imagenes de fondo pantalla de 320x551*/
+
+.imgtes{
+
+  opacity: 1;
+  filter: alpha(opacity=100);
+
+}
+
+.service-wrapper h3 {
+   font-size: 1.2em;
+   margin: 10px 0 !important;
+   color: black;
+ }
+
+.service-wrapper p {
+  margin-top: 0;
+}
+/* Row */
+.service-wrapper-row {
+  padding: 10px 0;
+}
+.service-wrapper-row h3 {
+  padding-top: 15px;
+}
+.service-wrapper-row .service-image {
+  padding-top: 15px;
+  text-align: center;
+}
+.service-wrapper-row .service-image img {
+  /*max-width: 80%;*/
+  vertical-align: bottom;
+  bottom: 0;
+  border: 7px solid #FFF;
+  -webkit-border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 5px;
+  -moz-background-clip: padding;
+  border-radius: 5px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 0 8px #999;
+  -moz-box-shadow: 0 0 8px #999;
+  box-shadow: 0 0 8px #999;
+  color: 0 0 8px #999;
+}
+
+
+@media (min-width: 375px) {
+  div#imprenta.service-wrapper{
+    background:  url("/app/images/quehacemos/imprenta367x249.png");
+    background-position: center;
+    background-size: 100%;
+    -moz-background-image: url("/app/images/quehacemos/imprenta367x249.png");
+    -webkit-background-image: url("/app/images/quehacemos/imprenta367x249.png");
+    -o-background-image:  url("/app/images/quehacemos/imprenta367x249.png");
+  }
+  /*coloco la imagen de fondo de decoracion*/
+  div#decoracion.service-wrapper{
+    background:  url("/app/images/quehacemos/decoracion367x249.png");
+    background-position: center;
+    background-size: 100%;
+    -moz-background-image: url("/app/images/quehacemos/decoracion367x249.png");
+    -webkit-background-image: url("/app/images/quehacemos/decoracion367x249.png");
+    -o-background-image:  url("/app/images/quehacemos/decoracion367x249.png");
+  }
+  /*coloco la imagen de fondo de Diseño Editorial*/
+  div#disenoeditorial.service-wrapper{
+    background:  url("/app/images/quehacemos/disenoeditorial367x249.png");
+    background-position: center;
+    background-size: 100%;
+    -moz-background-image: url("/app/images/quehacemos/disenoeditorial367x249.png");
+    -webkit-background-image: url("/app/images/quehacemos/disenoeditorial367x249.png");
+    -o-background-image:  url("/app/images/quehacemos/disenoeditorial367x249.png");
+  }
+  /*coloco la imagen de fondo de carnets*/
+  div#carnets.service-wrapper{
+  background:  url("/app/images/quehacemos/carnets367x249.png");
+    background-position: center;
+    background-size: 100%;
+  -moz-background-image: url("/app/images/quehacemos/carnets367x249.png");
+  -webkit-background-image: url("/app/images/quehacemos/carnets367x249.png");
+  -o-background-image:  url("/app/images/quehacemos/carnets367x249.png");
+}
+  /*coloco la imagen de fondo de granformato*/
+  div#granformato.service-wrapper{
+    background:  url("/app/images/quehacemos/granformato367x249.png");
+    background-position: center;
+    background-size: 100%;
+    -moz-background-image: url("/app/images/quehacemos/granformato367x249.png");
+    -webkit-background-image: url("/app/images/quehacemos/granformato367x249.png");
+    -o-background-image:  url("/app/images/quehacemos/granformato367x249.png");
+  }
+  /*coloco la imagen de fondo de rotulacion*/
+  div#rotulacion.service-wrapper{
+    background:  url("/app/images/quehacemos/rotulacion367x249.png");
+    background-position: center;
+    background-size: 100%;
+    -moz-background-image: url("/app/images/quehacemos/rotulacion367x249.png");
+    -webkit-background-image: url("/app/images/quehacemos/rotulacion367x249.png");
+    -o-background-image:  url("/app/images/quehacemos/rotulacion367x249.png");
+  }
+  /*coloco la imagen de fondo de pop*/
+  div#pop.service-wrapper{
+    background:  url("/app/images/quehacemos/pop367x249.png");
+    background-position: center;
+    background-size: 100%;
+    -moz-background-image: url("/app/images/quehacemos/pop367x249.png");
+    -webkit-background-image: url("/app/images/quehacemos/pop367x249.png");
+    -o-background-image:  url("/app/images/quehacemos/pop367x249.png");
+  }
+  /*coloco la imagen de fondo de señalizacion*/
+  div#senalizacion.service-wrapper {
+    background: url("/app/images/quehacemos/senalizacion367x249.png");
+    background-position: center;
+    background-size: 100%;
+    -moz-background-image: url("/app/images/quehacemos/senalizacion367x249.png");
+    -webkit-background-image: url("/app/images/quehacemos/senalizacion367x249.png");
+    -o-background-image: url("/app/images/quehacemos/senalizacion367x249.png");
+  }
+}
+
+@media (min-width: 768px){
+  div#imprenta.service-wrapper{
+    background:  url("/app/images/quehacemos/imprenta205x312.png");
+    background-position: center;
+    background-size: 100%;
+    -moz-background-image: url("/app/images/quehacemos/imprenta205x312.png");
+    -webkit-background-image: url("/app/images/quehacemos/imprenta205x312.png");
+    -o-background-image:  url("/app/images/quehacemos/imprenta205x312.png");
+
+  }
+  /*coloco la imagen de fondo de decoracion*/
+  div#decoracion.service-wrapper{
+    background:  url("/app/images/quehacemos/decoracion205x312.png");
+    background-position: center;
+    background-size: 100%;
+    -moz-background-image: url("/app/images/quehacemos/decoracion205x312.png");
+    -webkit-background-image: url("/app/images/quehacemos/decoracion205x312.png");
+    -o-background-image:  url("/app/images/quehacemos/decoracion205x312.png");
+  }
+  /*coloco la imagen de fondo de Diseño Editorial*/
+  div#disenoeditorial.service-wrapper{
+    background:  url("/app/images/quehacemos/disenoeditorial205x312.png");
+    background-position: center;
+    background-size: 100%;
+    -moz-background-image: url("/app/images/quehacemos/disenoeditorial205x312.png");
+    -webkit-background-image: url("/app/images/quehacemos/disenoeditorial205x312.png");
+    -o-background-image:  url("/app/images/quehacemos/disenoeditorial205x312.png");
+  }
+  /*coloco la imagen de fondo de carnets*/
+  div#carnets.service-wrapper{
+    background:  url("/app/images/quehacemos/carnets205x312.png");
+    background-position: center;
+    background-size: 100%;
+    -moz-background-image: url("/app/images/quehacemos/carnets205x312.png");
+    -webkit-background-image: url("/app/images/quehacemos/carnets205x312.png");
+    -o-background-image:  url("/app/images/quehacemos/carnets205x312.png");
+  }
+  /*coloco la imagen de fondo de granformato*/
+  div#granformato.service-wrapper{
+    background:  url("/app/images/quehacemos/granformato205x312.png");
+    background-position: center;
+    background-size: 100%;
+    -moz-background-image: url("/app/images/quehacemos/granformato205x312.png");
+    -webkit-background-image: url("/app/images/quehacemos/granformato205x312.png");
+    -o-background-image:  url("/app/images/quehacemos/granformato205x312.png");
+  }
+  /*coloco la imagen de fondo de rotulacion*/
+  div#rotulacion.service-wrapper{
+    background:  url("/app/images/quehacemos/rotulacion205x312.png");
+    background-position: center;
+    background-size: 100%;
+    -moz-background-image: url("/app/images/quehacemos/rotulacion205x312.png");
+    -webkit-background-image: url("/app/images/quehacemos/rotulacion205x312.png");
+    -o-background-image:  url("/app/images/quehacemos/rotulacion205x312.png");
+  }
+  /*coloco la imagen de fondo de pop*/
+  div#pop.service-wrapper{
+    background:  url("/app/images/quehacemos/pop205x312.png");
+    background-position: center;
+    background-size: 100%;
+    -moz-background-image: url("/app/images/quehacemos/pop205x312.png");
+    -webkit-background-image: url("/app/images/quehacemos/pop205x312.png");
+    -o-background-image:  url("/app/images/quehacemos/pop205x312.png");
+  }
+  /*coloco la imagen de fondo de señalizacion*/
+  div#senalizacion.service-wrapper {
+    background: url("/app/images/quehacemos/senalizacion205x312.png");
+    background-position: center;
+    background-size: 100%;
+    -moz-background-image: url("/app/images/quehacemos/senalizacion205x312.png");
+    -webkit-background-image: url("/app/images/quehacemos/senalizacion205x312.png");
+    -o-background-image: url("/app/images/quehacemos/senalizacion205x312.png");
+  }
+}
+
+@media (min-width: 1024px) {
+  div#imprenta.service-wrapper{
+    background:  url("/app/images/quehacemos/imprenta255x295.png");
+    background-position: center;
+    background-size: 100%;
+    -moz-background-image: url("/app/images/quehacemos/imprenta255x295.png");
+    -webkit-background-image: url("/app/images/quehacemos/imprenta255x295.png");
+    -o-background-image:  url("/app/images/quehacemos/imprenta255x295.png");
+  }
+  /*coloco la imagen de fondo de decoracion*/
+  div#decoracion.service-wrapper{
+    background:  url("/app/images/quehacemos/decoracion255x295.png");
+    background-position: center;
+    background-size: 100%;
+    -moz-background-image: url("/app/images/quehacemos/decoracion255x295.png");
+    -webkit-background-image: url("/app/images/quehacemos/decoracion255x295.png");
+    -o-background-image:  url("/app/images/quehacemos/decoracion255x295.png");
+  }
+  /*coloco la imagen de fondo de Diseño Editorial*/
+  div#disenoeditorial.service-wrapper{
+    background:  url("/app/images/quehacemos/disenoeditorial255x295.png");
+    background-position: center;
+    background-size: 100%;
+    -moz-background-image: url("/app/images/quehacemos/disenoeditorial255x295.png");
+    -webkit-background-image: url("/app/images/quehacemos/disenoeditorial255x295.png");
+    -o-background-image:  url("/app/images/quehacemos/disenoeditorial255x295.png");
+  }
+  /*coloco la imagen de fondo de carnets*/
+  div#carnets.service-wrapper{
+    background:  url("/app/images/quehacemos/carnets255x295.png");
+    background-position: center;
+    background-size: 100%;
+    -moz-background-image: url("/app/images/quehacemos/carnets255x295.png");
+    -webkit-background-image: url("/app/images/quehacemos/carnets255x295.png");
+    -o-background-image:  url("/app/images/quehacemos/carnets255x295.png");
+  }
+  /*coloco la imagen de fondo de granformato*/
+  div#granformato.service-wrapper{
+    background:  url("/app/images/quehacemos/granformato255x295.png");
+    background-position: center;
+    background-size: 100%;
+    -moz-background-image: url("/app/images/quehacemos/granformato255x295.png");
+    -webkit-background-image: url("/app/images/quehacemos/granformato255x295.png");
+    -o-background-image:  url("/app/images/quehacemos/granformato255x295.png");
+  }
+  /*coloco la imagen de fondo de rotulacion*/
+  div#rotulacion.service-wrapper{
+    background:  url("/app/images/quehacemos/rotulacion255x295.png");
+    background-position: center;
+    background-size: 100%;
+    -moz-background-image: url("/app/images/quehacemos/rotulacion255x295.png");
+    -webkit-background-image: url("/app/images/quehacemos/rotulacion255x295.png");
+    -o-background-image:  url("/app/images/quehacemos/rotulacion255x295.png");
+  }
+  /*coloco la imagen de fondo de pop*/
+  div#pop.service-wrapper{
+    background:  url("/app/images/quehacemos/pop255x295.png");
+    background-position: center;
+    background-size: 100%;
+    -moz-background-image: url("/app/images/quehacemos/pop255x295.png");
+    -webkit-background-image: url("/app/images/quehacemos/pop255x295.png");
+    -o-background-image:  url("/app/images/quehacemos/pop255x295.png");
+  }
+  /*coloco la imagen de fondo de señalizacion*/
+  div#senalizacion.service-wrapper {
+    background: url("/app/images/quehacemos/senalizacion255x295.png");
+    background-position: center;
+    background-size: 100%;
+    -moz-background-image: url("/app/images/quehacemos/senalizacion255x295.png");
+    -webkit-background-image: url("/app/images/quehacemos/senalizacion255x295.png");
+    -o-background-image: url("/app/images/quehacemos/senalizacion255x295.png");
+  }
+}

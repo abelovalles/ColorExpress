@@ -1,0 +1,14 @@
+
+.sebm-google-map-container {
+  width: inherit;
+  height: 200px;
+}
+.sebm-google-map-container-inner div div{
+   width: inherit;
+  height: inherit;
+}
+
+footer{
+  background-color: #eceeef;
+  margin-top: 10px;
+}

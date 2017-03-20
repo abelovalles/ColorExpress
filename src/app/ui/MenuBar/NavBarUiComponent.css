@@ -1,0 +1,173 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+
+.logonav{
+  height: 50px;
+
+}
+span#menu{
+  float: right;
+  padding-top: 10px;
+  font-size:30px;
+}
+
+.col{
+  visibility: visible;
+  position: relative;
+  display: inline !important;
+  direction: rtl;
+  z-index: 1000;
+  margin-top: -45px;
+  padding-right: 30px;
+}
+.rrss {
+  display: none;
+  padding: 16px 16px 16px 0px;
+}
+.navbar.navbar-fixed-top.navbar-dark.bg-inverse{
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+}
+.bg-inverse {
+  background-color: white !important
+}
+/*coloco la navegacion tipo dropdown para celular por default*/
+.navbar-nav {
+  height: 100%;
+  /*display: list-item;*/
+  display: none;
+  flex-direction: column;
+  direction: rtl;
+  z-index: 1000;
+  padding-right: 0px;
+}
+.navbar {
+  display: block;
+  position: fixed;
+  z-index: 1010;
+  width: 100%;
+  background: white;
+}
+.nav-item{
+
+padding-right: 10px;
+}
+nav-item:hover{
+  background-color: #b9bdb6;
+}
+.facebook{
+  height: 30px;
+  width: 30px;
+}
+.instagram{
+  height: 30px;
+  width: 30px;
+}
+.twitter{
+  height: 30px;
+  width: 30px;
+}
+
+.mr-auto{
+  width: 100%;
+}
+.navbar-inverse .navbar-nav .nav-link {
+  color: #464a4c;
+}
+
+.menuselect{
+  display: list-item;
+}
+
+
+@media (min-width: 1024px) {
+  .navbar-nav{
+    display: inline-flex ;
+    flex-direction: row;
+    direction: ltr;
+    height: 58px;
+    padding-right: 40px;
+  }
+  .menuselect{
+    display:  inline-flex ;
+  }
+  .col{
+    visibility: collapse;
+  }
+  .rrss{
+    display: inline;
+    visibility: visible;
+  }
+  .mr-auto{
+    width: inherit;
+  }
+  .nav-link{
+    border-left: 1px solid #bbb;
+    padding-left: 10px;
+    padding-right: 10px;
+    -ms-transform: skew(-25deg,0deg);
+    -webkit-transform: skew(-25deg,0deg);
+    transform: skew(-25deg,0deg);
+  }
+  span#menu{
+    display: none;
+  }
+
+}
+@media (min-width: 992px){
+  .navbar-nav>li>a{
+    font-size: 16px;
+  }
+  .navbar-collapse {
+    width: 970px;
+  }
+  .cuerpo{
+    font-size: 14px;
+  }
+  .col-md-6 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px){
+  .navbar-collapse {
+    width: 1170px;
+  }
+  .navbar-nav>li>a{
+    font-size: 18px;
+  }
+  .cuerpo{
+    font-size: 16px;
+  }
+  .nav-link{
+    border-left: 1px solid #bbb;
+    padding-left: 10px;
+    padding-right: 10px;
+    -ms-transform: skew(-25deg,0deg);
+    -webkit-transform: skew(-25deg,0deg);
+    transform: skew(-25deg,0deg);
+  }
+}
+
+@media (min-width: 1500px){
+  .navbar-collapse {
+    width: 1470px;
+  }
+  .navbar-nav>li>a{
+    font-size: 20px;
+  }
+  .cuerpo{
+    font-size: 18px;
+  }
+  .nav-link{
+    border-left: 1px solid #bbb;
+    padding-left: 10px;
+    padding-right: 10px;
+    -ms-transform: skew(-25deg,0deg);
+    -webkit-transform: skew(-25deg,0deg);
+    transform: skew(-25deg,0deg);
+  }
+}
+
+
