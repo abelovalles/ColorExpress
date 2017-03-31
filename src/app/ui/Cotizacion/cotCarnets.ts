@@ -5,7 +5,6 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import {Router} from '@angular/router';
 import { ObInfoRestService } from './ObInfoRestService';
-import 'emailjs/email';
 import 'rxjs/add/operator/startWith';
 
 @Component({

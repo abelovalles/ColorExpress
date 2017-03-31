@@ -21,24 +21,14 @@ export class ClientesComponent {
     config.wrap = true;
     config.keyboard = true;
     this.slides = [
-      {'url' : '/app/images/clientes/logo0.png'},
-      {'url' : '/app/images/clientes/logo0.png'},
-      {'url' : '/app/images/clientes/logo0.png'},
-      {'url' : '/app/images/clientes/logo0.png'},
-      {'url' : '/app/images/clientes/logo0.png'},
-      {'url' : '/app/images/clientes/logo0.png'},
-      {'url' : '/app/images/clientes/logo0.png'},
-      {'url' : '/app/images/clientes/logo0.png'},
-      {'url' : '/app/images/clientes/logo0.png'},
-      {'url' : '/app/images/clientes/logo0.png'},
-      {'url' : '/app/images/clientes/logo0.png'},
-      {'url' : '/app/images/clientes/logo0.png'},
-      {'url' : '/app/images/clientes/logo0.png'},
-      {'url' : '/app/images/clientes/logo0.png'},
-      {'url' : '/app/images/clientes/logo0.png'},
-      {'url' : '/app/images/clientes/logo0.png'},
-      {'url' : '/app/images/clientes/logo0.png'},
-      {'url' : '/app/images/clientes/logo0.png'}
+      {'url' : '/app/images/clientes/sanpablocolor.png'},
+      {'url' : '/app/images/clientes/plusexpress.png'},
+      {'url' : '/app/images/clientes/zoombalive.png'},
+      {'url' : '/app/images/clientes/naturalia.png'},
+      {'url' : '/app/images/clientes/maximaseguros.png'},
+      {'url' : '/app/images/clientes/gastrolab.png'},
+      {'url' : '/app/images/clientes/ciajema.png'},
+      {'url' : '/app/images/clientes/allcargo.png'}
 
     ];
   }
