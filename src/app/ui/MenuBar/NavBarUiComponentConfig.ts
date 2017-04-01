@@ -14,7 +14,6 @@ import { PopUiComponent } from '../QueHacemos/pop';
 import { RotulacionUiComponent } from '../QueHacemos/rotulacion';
 import { SenalizacionUiComponent } from '../QueHacemos/senalizacion';
 import { MostrarGalleryUiComponent } from '../Gallery/MostrarGalleryUiComponent';
-import { RestfulUiComponent } from '../Contactanos/ObtenerInformacionRest';
 import { CotizarDecComponent } from '../Cotizacion/cotDecoracion';
 import { CotizarImpComponent } from '../Cotizacion/cotImprenta';
 import { CotizarCartComponent } from '../Cotizacion/cotCarnets';
