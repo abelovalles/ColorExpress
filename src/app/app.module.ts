@@ -88,4 +88,4 @@ import { AppSliderUiComponent } from './ui/slider/SliderUiComponent';
 
 export class AppModule {   }
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+/*platformBrowserDynamic().bootstrapModule(AppModule);*/
