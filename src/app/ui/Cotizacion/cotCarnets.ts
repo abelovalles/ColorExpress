@@ -53,18 +53,18 @@ export class CotizarCartComponent {
 
   iniciarmaterial(material: String) {
     this.complexForm.controls['collar'].setValue(material);
-    console.log(' Entro al metodo ' + material);
+   /* console.log(' Entro al metodo ' + material);*/
   }
   iniciarporta(portaC: String) {
     this.complexForm.controls['portaCarnet'].setValue(portaC);
-    console.log(' Entro al metodo ' + portaC);
+   /* console.log(' Entro al metodo ' + portaC);*/
 
   }
 
   enviarcorreo() {
     this._httpservices.postJSON(this.complexForm).subscribe(
       data => this.postData = JSON.stringify(data),
-      error => alert(error),
+      error => alert('No se pudo enviar la solicitud , intentalo mas tarde o comunicate a ventas1@colorexpress.com.pa'),
       () => console.log('Finished')
     );
   }

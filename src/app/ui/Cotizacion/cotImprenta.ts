@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import 'rxjs/add/operator/startWith';
 import { ObInfoRestService } from './ObInfoRestService';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-cotizacionimp',
@@ -37,7 +38,7 @@ export class CotizarImpComponent {
   colores = ['1' , '2' , '3' , 'FullColor'];
 
 // pasamos una instancia del FormBuilder a nuestro constructor
-  constructor(fb: FormBuilder, private _httpservices: ObInfoRestService) {
+  constructor(fb: FormBuilder, private _httpservices: ObInfoRestService, private router: Router) {
     // Aqui estamos utiulizando el FormBuilder para armar nuestro formularioi
     this.complexForm = fb.group({
       // pdemos setear valores por defecto pasandole los valores correspondientes
@@ -77,7 +78,7 @@ export class CotizarImpComponent {
 
   iniciarmaterial(material: String) {
     this.complexForm.controls['tipoMaterial'].setValue(material);
-    console.log(' Entro al metodo ' + material);
+   /* console.log(' Entro al metodo ' + material);*/
     if (material === 'Papel') {
       this.tipoMaterial = this.complexForm.controls['material'].valueChanges
         .startWith(null)
@@ -110,7 +111,7 @@ export class CotizarImpComponent {
   enviarcorreo() {
     this._httpservices.postJSON(this.complexForm).subscribe(
       data => this.postData = JSON.stringify(data),
-      error => alert(error),
+      error =>  alert('No se pudo enviar la solicitud , intentalo mas tarde o comunicate a ventas1@colorexpress.com.pa'),
       () => console.log('Finished')
     );
   }
@@ -119,6 +120,7 @@ export class CotizarImpComponent {
     /*console.log('Reactive FormData');
      console.log(value);*/
     this.enviarcorreo();
+    this.router.navigate(['/services/imprenta']);
   }
 
 }

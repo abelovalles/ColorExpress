@@ -1,6 +1,10 @@
 .mat-input-container {
   width: 100%;
 }
+
+.mat-radio-label{
+  padding-right: 10px !important;
+}
 .colmd{
   width: 50%;
 }
@@ -9,3 +13,4 @@
     width:25%;
   }
 }
+

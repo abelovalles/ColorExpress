@@ -1,11 +1,23 @@
 /*--------------------------------------------------------------------------
 +	Homepage Slider Style (modified sequencejs CSS). Sorry, no LESS here
 --------------------------------------------------------------------------*/
+
+.carousel-control-next {
+  display: none !important;
+}
+
+.carousel-control-prev {
+  display: none !important;
+}
+
 .carousel {
   padding-top: 90px;
   max-height: 480px;
   width: inherit;
 }
+
+
+
 .imgcaru{
   width: inherit;
 }
@@ -13,5 +25,4 @@
   width: 100%;
   height: auto;
 }
-
 

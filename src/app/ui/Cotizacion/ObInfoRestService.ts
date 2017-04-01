@@ -20,10 +20,10 @@ export class ObInfoRestService {
     colorAnverso: form.controls['colorAnverso'].value, colorReverso: form.controls['colorReverso'].value,
     collar: form.controls['collar'].value, portaCarnet: form.controls['portaCarnet'].value,
     detalle: form.controls['detalle'].value});
-    console.log(json);
+   /* console.log(json);*/
     let headers = new Headers({ 'Content-Type': 'application/json,charset=UTF-8' });
     headers.append('Access-Control-Allow-Origin', '*');
     let options = new RequestOptions({ headers: headers });
-    return this._http.post('http://localhost:8084/emailsender/correo', json, headers).map(res => res.json());
+    return this._http.post('http://localhost:8080/emailsender/correo', json, headers).map(res => res.json());
   }
 }

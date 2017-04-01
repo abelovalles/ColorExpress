@@ -1,7 +1,7 @@
  // se crea los modulos para angular
  import 'hammerjs';
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
@@ -29,7 +29,6 @@ import { AppSliderUiComponent } from './ui/slider/SliderUiComponent';
  import { FooterComponent } from './ui/Footer/Footer';
  import { GalleryComponent } from './ui/Gallery/GalleryUiComponent';
  import { MostrarGalleryUiComponent } from './ui/Gallery/MostrarGalleryUiComponent';
- import { RestfulUiComponent } from './ui/Contactanos/ObtenerInformacionRest';
  import { CotizarDecComponent } from './ui/Cotizacion/cotDecoracion';
  import { CotizarImpComponent } from './ui/Cotizacion/cotImprenta';
  import { CotizarCartComponent } from './ui/Cotizacion/cotCarnets';
@@ -39,6 +38,7 @@ import { AppSliderUiComponent } from './ui/slider/SliderUiComponent';
  import { CotizarRotComponent } from './ui/Cotizacion/cotRotulacion';
  import { CotizarSenComponent } from './ui/Cotizacion/cotSenalizacion';
 // Decorador de nivel de clase
+
 @NgModule({
   // Se coloca los componentes que vamso a realizar en nuestro Ngmodule
   declarations: [
@@ -61,7 +61,6 @@ import { AppSliderUiComponent } from './ui/slider/SliderUiComponent';
     FooterComponent,
     GalleryComponent,
     MostrarGalleryUiComponent,
-    RestfulUiComponent,
     CotizarDecComponent,
     CotizarImpComponent,
     CotizarCartComponent,
@@ -80,11 +79,13 @@ import { AppSliderUiComponent } from './ui/slider/SliderUiComponent';
     JsonpModule,
     routing ,
     MaterialRootModule,
-    AgmCoreModule.forRoot()
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBo6OBQZY3iKKPaTbhq-9sSfqqQVF1V8ws'
+    })
   ],
   bootstrap: [ AppMainContainerComponent]
 })
 
-export class AppModule { }
+export class AppModule {   }
 
 platformBrowserDynamic().bootstrapModule(AppModule);

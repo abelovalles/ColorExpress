@@ -12,10 +12,17 @@ import { Component } from '@angular/core';
 export class FooterComponent {
 
   // initial center position for the map
-  lat= -37.7863713;
-  lng= 175.2796333;
+  lat= 9.0008774;
+  lng= -79.5343398;
+  zoom = 16;
 
 
-
+  markers = [{
+      lat: 9.0008774,
+      lng: -79.5343398,
+      label: 'ColorExpress',
+      draggable: true
+    }];
 
 }
+
